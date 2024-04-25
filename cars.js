@@ -1,13 +1,15 @@
 //cars
 
-let xCars = [600, 600, 600];
-let yCars = [40, 98, 150];
-let vCars = [2, 2.5, 3.2];
+let xCars = [600, 600, 600, 600, 600, 600];
+let yCars = [40, 98, 150, 210, 270, 318];
+let vCars = [2, 2.5, 3.2, 5, 3.3, 2.3];
 
+let carWidth = 50;
+let carHeight = 40;
 
 function drawCars() {
     for (let i = 0; i < carsSprites.length; i++) {
-        image(carsSprites[i], xCars[i], yCars[i], 50, 40);
+        image(carsSprites[i], xCars[i], yCars[i], carWidth, carHeight);
     }
 }
 

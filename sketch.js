@@ -13,5 +13,8 @@ function draw() {
     movePlayer();
     moveCars();
     resetCars();
+    checkCollision();
+    drawScore();
+    increaseScore();
 }
 

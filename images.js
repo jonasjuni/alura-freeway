@@ -15,5 +15,5 @@ function preload() {
     car1Sprite = loadImage('assets/images/carro-2.png');
     car2Sprite = loadImage('assets/images/carro-3.png');
 
-    carsSprites = [car0Sprite, car1Sprite,car2Sprite]
+    carsSprites = [car0Sprite, car1Sprite, car2Sprite, car0Sprite, car1Sprite, car2Sprite]
 }
