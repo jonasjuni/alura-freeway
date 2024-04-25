@@ -11,7 +11,7 @@ function movePlayer() {
     if (keyIsDown(UP_ARROW)) {
         yPlayer -= movementSpeed;
     }
-    if (keyIsDown(DOWN_ARROW)) {
+    if (keyIsDown(DOWN_ARROW) && yPlayer < 370) {
         yPlayer += movementSpeed;
     }
 }
@@ -19,7 +19,11 @@ function movePlayer() {
 function checkCollision() {
     for(let i = 0; i < carsSprites.length; i++) {
          if(collideRectCircle(xCars[i], yCars[i], carWidth, carHeight, xPlayer, yPlayer, 15)){
-            resetPlayer()
+            collisionSound.play();
+            resetPlayer();
+            if (score > 0) {
+                score -= 1;
+            }
          }
     } 
 }
@@ -37,6 +41,7 @@ function drawScore() {
 
 function increaseScore() {
     if(yPlayer < 15) {
+        scoreSound.play();
         score += 1;
         resetPlayer();
     }

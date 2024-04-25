@@ -4,6 +4,7 @@ let canvasHeight = 400;
 
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
+    trilhaSound.loop();
 }
 
 function draw() {
